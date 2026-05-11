@@ -82,10 +82,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/jpeg", href: "/favicon.jpeg" },
+      { rel: "apple-touch-icon", href: "/favicon.jpeg" },
     ],
   }),
   shellComponent: RootShell,
