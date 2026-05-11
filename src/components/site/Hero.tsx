@@ -3,49 +3,42 @@ import bg from "@/assets/gallery/hero-bg.jpeg";
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Full background image */}
       <div className="absolute inset-0">
         <img
           src={bg}
-          alt="Box surprise Eniciacrep avec ours, champagne et chocolats"
+          alt="Box surprise Eniciacrep"
           className="w-full h-full object-cover object-center"
           loading="eager"
           decoding="async"
         />
-        {/* Subtle overlays — keep image crisp, just enough contrast for text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
 
-      <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{
-        backgroundImage: "radial-gradient(circle at 20% 20%, var(--gold) 0, transparent 40%), radial-gradient(circle at 80% 70%, var(--rose-deep) 0, transparent 45%)"
-      }} />
-
-      <div className="container mx-auto px-6 pt-32 pb-20 relative">
-        <div className="max-w-2xl space-y-8 animate-in fade-in slide-in-from-bottom-6 duration-700">
-          <span className="font-script text-3xl text-gradient-gold drop-shadow-sm">Eniciacrep — Box</span>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white drop-shadow-lg">
-            Créateur de <em className="text-gradient-gold not-italic">moments</em>
-            <br />inoubliables.
+      <div className="container mx-auto px-6 pt-28 pb-20 relative">
+        <div className="max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <span className="block text-gold uppercase tracking-[0.25em] text-sm md:text-base font-medium">
+            Chaque box raconte une
+          </span>
+          <h1 className="font-serif font-bold text-white leading-[0.95] text-6xl md:text-8xl lg:text-9xl drop-shadow-lg">
+            HISTOIRE
           </h1>
-          <p className="text-lg text-white/90 max-w-md leading-relaxed drop-shadow">
-            L'élégance au service de vos émotions. Bouquets, box surprises et
-            petits-déjeuners gourmands livrés avec délicatesse.
+          <p className="text-base md:text-lg text-white/90 max-w-lg leading-relaxed pt-2">
+            Bouquets, box surprises et petits-déjeuners gourmands —
+            l'élégance au service de vos émotions.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#contact" className="px-7 py-3.5 rounded-full bg-white text-foreground hover:bg-rose-deep hover:text-white transition-all hover:shadow-luxe">
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
+            <a
+              href="#services"
+              className="px-8 py-4 rounded-sm bg-gold text-white text-center font-medium hover:bg-rose-deep transition-colors"
+            >
+              Découvrir nos offres
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 rounded-sm bg-white text-foreground text-center font-medium hover:bg-cream transition-colors"
+            >
               Réserver une surprise
             </a>
-            <a href="#services" className="px-7 py-3.5 rounded-full border border-white/50 text-white bg-white/10 backdrop-blur-sm hover:border-gold hover:bg-gold/20 transition-all">
-              Découvrir nos box
-            </a>
-          </div>
-          <div className="flex items-center gap-6 pt-4 text-xs uppercase tracking-[0.2em] text-white/80">
-            <span>Sur-mesure</span>
-            <span className="h-px w-8 bg-gold" />
-            <span>Livraison soignée</span>
-            <span className="h-px w-8 bg-gold" />
-            <span>Émotion garantie</span>
           </div>
         </div>
       </div>
