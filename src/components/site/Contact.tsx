@@ -1,4 +1,4 @@
-import { MessageCircle, Instagram, Phone, Sparkles } from "lucide-react";
+import { MessageCircle, Instagram, Phone, Sparkles, Music2 } from "lucide-react";
 import bg from "@/assets/gallery/box-jetaime.jpeg";
 
 const PHONE = "221767600898";
@@ -83,6 +83,22 @@ export function Contact() {
                 <div className="flex-1">
                   <div className="font-medium text-foreground">Instagram</div>
                   <div className="text-sm text-muted-foreground">@eniciacrep</div>
+                </div>
+                <span className="text-gold opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@enicia1crep?_r=1&_t=ZS-962QU5APBXc"
+                target="_blank"
+                rel="noopener"
+                className="group flex items-center gap-4 p-4 rounded-2xl bg-cream hover:bg-rose transition-colors"
+              >
+                <span className="h-12 w-12 shrink-0 rounded-full bg-foreground text-background flex items-center justify-center">
+                  <Music2 className="h-5 w-5" />
+                </span>
+                <div className="flex-1">
+                  <div className="font-medium text-foreground">TikTok</div>
+                  <div className="text-sm text-muted-foreground">@enicia1crep</div>
                 </div>
                 <span className="text-gold opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
               </a>
