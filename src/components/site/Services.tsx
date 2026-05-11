@@ -1,6 +1,6 @@
 import bouquet from "@/assets/gallery/bouquet-butterfly.jpeg";
-import box from "@/assets/gallery/box-bear-amor.jpeg";
-import birthday from "@/assets/gallery/birthday-bouquet.jpeg";
+import box from "@/assets/gallery/box-jetaime.jpeg";
+import birthday from "@/assets/gallery/breakfast-box.jpeg";
 import event from "@/assets/gallery/marry-me.jpeg";
 
 const PHONE = "221767600898";
