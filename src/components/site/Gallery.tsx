@@ -7,8 +7,11 @@ import g5 from "@/assets/gallery/bouquet-butterfly.jpeg";
 import g6 from "@/assets/gallery/birthday-bouquet.jpeg";
 import g7 from "@/assets/gallery/box-bear-amor.jpeg";
 import g8 from "@/assets/gallery/box-white-bear.jpeg";
+import g9 from "@/assets/gallery/breakfast-box.jpeg";
+import g10 from "@/assets/gallery/breakfast-pastries.jpeg";
+import g11 from "@/assets/gallery/box-jetaime.jpeg";
 
-const images = [g1, g2, g3, g4, g5, g6, g7, g8];
+const images = [g1, g9, g11, g2, g3, g10, g4, g5, g6, g7, g8];
 
 export function Gallery() {
   return (
