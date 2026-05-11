@@ -157,3 +157,43 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-script { font-family: var(--font-script); }
+  .font-serif { font-family: var(--font-serif); }
+  .text-gold { color: var(--gold); }
+  .bg-gold { background-color: var(--gold); }
+  .border-gold { border-color: var(--gold); }
+  .bg-cream { background-color: var(--cream); }
+  .bg-rose { background-color: var(--rose); }
+  .text-rose-deep { color: var(--rose-deep); }
+  .gradient-luxe {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--rose) 100%);
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--rose-deep) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .shadow-luxe {
+    box-shadow: 0 20px 60px -20px color-mix(in oklab, var(--rose-deep) 25%, transparent);
+  }
+  .shadow-soft {
+    box-shadow: 0 8px 30px -10px color-mix(in oklab, var(--gold) 30%, transparent);
+  }
+}
