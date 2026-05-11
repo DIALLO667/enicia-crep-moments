@@ -1,26 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Gallery } from "@/components/site/Gallery";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Eniciacrep — Bouquets, Box surprises & Événementiel de luxe" },
+      { name: "description", content: "Eniciacrep crée des moments inoubliables : bouquets signature, box surprises personnalisées, petits-déjeuners gourmands et décoration d'événements." },
+      { property: "og:title", content: "Eniciacrep — Créateur de moments inoubliables" },
+      { property: "og:description", content: "L'élégance au service de vos émotions. Bouquets, box, événementiel sur-mesure." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="bg-background text-foreground overflow-x-hidden">
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
