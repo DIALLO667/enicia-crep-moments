@@ -8,12 +8,13 @@ export function Hero() {
         <img
           src={bg}
           alt="Box surprise Eniciacrep avec ours, champagne et chocolats"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
+          loading="eager"
+          decoding="async"
         />
-        {/* Darker overlays for contrast while keeping image visible */}
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+        {/* Subtle overlays — keep image crisp, just enough contrast for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
       </div>
 
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{
