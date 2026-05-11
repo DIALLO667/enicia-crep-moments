@@ -10,9 +10,10 @@ export function Hero() {
           alt="Box surprise Eniciacrep avec ours, champagne et chocolats"
           className="w-full h-full object-cover"
         />
-        {/* Overlays for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
+        {/* Darker overlays for contrast while keeping image visible */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
       </div>
 
       <div className="absolute inset-0 opacity-[0.08] pointer-events-none" style={{
