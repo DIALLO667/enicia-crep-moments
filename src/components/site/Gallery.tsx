@@ -89,25 +89,24 @@ export function Gallery() {
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col gap-2 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500">
-                <div className="text-white">
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-gold">
-                    {item.category}
-                  </div>
-                  <div className="font-serif text-base md:text-lg leading-tight">
-                    {item.title}
-                  </div>
+              {/* Floating WhatsApp button */}
+              <a
+                href={waLink(item.title)}
+                target="_blank"
+                rel="noopener"
+                aria-label={`Commander ${item.title} sur WhatsApp`}
+                className="absolute top-3 right-3 h-9 w-9 rounded-full bg-background/90 backdrop-blur text-foreground flex items-center justify-center shadow-soft hover:bg-gold hover:text-background transition-colors"
+              >
+                <MessageCircle className="h-4 w-4" />
+              </a>
+              {/* Title overlay */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-10">
+                <div className="text-[10px] uppercase tracking-[0.2em] text-gold">
+                  {item.category}
                 </div>
-                <a
-                  href={waLink(item.title)}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-gold text-background text-xs md:text-sm font-medium hover:bg-foreground hover:text-background transition-colors"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  Commander
-                </a>
+                <div className="font-serif text-sm md:text-base text-white leading-tight">
+                  {item.title}
+                </div>
               </div>
             </div>
           ))}
